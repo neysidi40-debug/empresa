@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+/* GERAL */
 body{
     margin:0;
     font-family:'Inter',sans-serif;
@@ -16,7 +17,7 @@ body{
     padding-top:80px;
 }
 
-/* MENU FIXO */
+/* MENU */
 nav{
     position:fixed;
     top:0;
@@ -27,6 +28,7 @@ nav{
     z-index:1000;
     border-bottom:1px solid rgba(255,255,255,.08);
 }
+
 .nav-container{
     max-width:1200px;
     margin:0 auto;
@@ -35,18 +37,42 @@ nav{
     justify-content:space-between;
     align-items:center;
 }
+
 .logo{
     font-weight:700;
     font-size:1.1rem;
 }
-.menu a{
+
+/* DESKTOP */
+.menu-desktop a{
     margin-left:24px;
     text-decoration:none;
     color:#ccc;
     font-weight:500;
 }
-.menu a:hover{
+.menu-desktop a:hover{
     color:#ff4b4b;
+}
+
+/* MOBILE */
+.menu-mobile-btn{
+    display:none;
+    font-size:1.8rem;
+    cursor:pointer;
+}
+
+.menu-mobile{
+    display:none;
+    flex-direction:column;
+    background:#000;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.menu-mobile a{
+    padding:18px;
+    text-decoration:none;
+    color:#fff;
+    border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 /* HERO */
@@ -56,10 +82,12 @@ nav{
     padding:100px 20px;
     text-align:center;
 }
+
 .hero h1{
     font-size:2.6rem;
     margin-bottom:20px;
 }
+
 .hero p{
     font-size:1.1rem;
     color:#ddd;
@@ -92,6 +120,7 @@ nav{
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:24px;
 }
+
 .card{
     background:#0f0f0f;
     border:1px solid rgba(255,255,255,.05);
@@ -105,19 +134,32 @@ nav{
     transform:translateY(-6px);
     border-color:#ff4b4b;
 }
+
 .card h3{
     margin-top:0;
     font-size:1.4rem;
 }
+
 .card p{
     color:#ccc;
     line-height:1.6;
 }
+
 .card span{
     display:block;
     margin-top:20px;
     color:#ff4b4b;
     font-weight:600;
+}
+
+/* RESPONSIVO */
+@media (max-width:768px){
+    .menu-desktop{
+        display:none;
+    }
+    .menu-mobile-btn{
+        display:block;
+    }
 }
 </style>
 </head>
@@ -127,21 +169,31 @@ nav{
 <nav>
     <div class="nav-container">
         <div class="logo">Gestão Artística</div>
-        <div class="menu">
+
+        <div class="menu-desktop">
             <a href="index.html">Home</a>
             <a href="batalha.html">Batalha</a>
             <a href="autoral.html">Autoral</a>
             <a href="visibilidade.html">Visibilidade</a>
             <a href="quem-somos.html">Quem Somos</a>
-
         </div>
+
+        <div class="menu-mobile-btn" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <div class="menu-mobile" id="menuMobile">
+        <a href="index.html">Home</a>
+        <a href="batalha.html">Batalha</a>
+        <a href="autoral.html">Autoral</a>
+        <a href="visibilidade.html">Visibilidade</a>
+        <a href="quem-somos.html">Quem Somos</a>
     </div>
 </nav>
 
 <section class="hero">
     <h1>Direção artística para MCs independentes</h1>
     <p>
-        Avaliação, posicionamento e crescimento real dentro da cena.  
+        Avaliação, posicionamento e crescimento real dentro da cena.
         Aqui você recebe direção, não promessa vazia.
     </p>
 
@@ -156,30 +208,30 @@ nav{
 
     <a href="batalha.html" class="card">
         <h3>Batalha</h3>
-        <p>
-            Avaliação de freestyle, postura, presença e leitura de roda.
-        </p>
+        <p>Avaliação de freestyle, postura e presença de roda.</p>
         <span>Ver direção →</span>
     </a>
 
     <a href="autoral.html" class="card">
         <h3>Autoral</h3>
-        <p>
-            Construção de identidade, escrita, estética e som próprio.
-        </p>
+        <p>Identidade sonora, escrita, estética e posicionamento.</p>
         <span>Ver direção →</span>
     </a>
 
     <a href="visibilidade.html" class="card">
         <h3>Visibilidade</h3>
-        <p>
-            Posicionamento, imagem, redes sociais e crescimento orgânico.
-        </p>
+        <p>Imagem, redes sociais e crescimento orgânico.</p>
         <span>Ver direção →</span>
     </a>
 
 </section>
 
+<script>
+function toggleMenu(){
+    const menu = document.getElementById("menuMobile");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+</script>
+
 </body>
 </html>
-
