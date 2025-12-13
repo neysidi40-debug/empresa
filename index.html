@@ -13,19 +13,54 @@ body{
     font-family:'Inter',sans-serif;
     background:radial-gradient(circle at top,#111 0%,#000 70%);
     color:#eee;
+    padding-top:70px;
 }
 
+/* MENU */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+.nav-container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:14px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    font-weight:700;
+    font-size:1.1rem;
+    letter-spacing:.5px;
+}
+.menu a{
+    margin-left:28px;
+    text-decoration:none;
+    color:#ccc;
+    font-weight:500;
+    transition:.3s;
+}
+.menu a:hover{
+    color:#ff4b4b;
+}
+
+/* HERO */
 header{
     padding:90px 20px;
     text-align:center;
 }
-
 header h1{
     font-size:2.8rem;
     font-weight:700;
     margin-bottom:20px;
 }
-
 header p{
     max-width:760px;
     margin:0 auto 40px;
@@ -33,7 +68,6 @@ header p{
     color:#ccc;
     line-height:1.6;
 }
-
 .btn{
     display:inline-block;
     padding:16px 38px;
@@ -44,23 +78,21 @@ header p{
     font-weight:600;
     transition:.3s;
 }
-
 .btn:hover{
     background:#e63b3b;
 }
 
+/* SEÇÕES */
 section{
     max-width:1100px;
     margin:0 auto;
     padding:80px 20px;
 }
-
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
     gap:30px;
 }
-
 .card{
     background:rgba(20,20,20,.95);
     border-radius:20px;
@@ -68,32 +100,28 @@ section{
     box-shadow:0 20px 60px rgba(0,0,0,.6);
     border:1px solid rgba(255,255,255,.06);
 }
-
 .card h3{
     margin-top:0;
     font-size:1.4rem;
 }
-
 .card p{
     color:#bbb;
     line-height:1.6;
 }
-
 .process{
     background:rgba(10,10,10,.9);
     border-radius:20px;
     padding:40px;
 }
-
 .process h2{
     margin-top:0;
 }
-
 .process ol{
     line-height:1.9;
     color:#ccc;
 }
 
+/* FOOTER */
 footer{
     text-align:center;
     padding:40px 20px;
@@ -105,6 +133,20 @@ footer{
 
 <body>
 
+<!-- MENU FIXO -->
+<nav>
+    <div class="nav-container">
+        <div class="logo">Gestão Artística</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="batalha.html">Batalha</a>
+            <a href="autoral.html">Autoral</a>
+            <a href="visibilidade.html">Visibilidade</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
 <header>
     <h1>Gestão artística com critério e visão</h1>
     <p>
@@ -113,12 +155,13 @@ footer{
         e posicionamento de imagem.
     </p>
 
-    <!-- TROQUE O LINK PELO SEU GOOGLE FORMS -->
-    <a href="https://forms.gle/1UNADXtjTCiPjXqT8" class="btn">
+    <!-- TROQUE PELO LINK REAL DO SEU FORM -->
+    <a href="https://forms.gle/vNf1xJ3Ry6ZQEjQf8" class="btn">
         Iniciar avaliação
     </a>
 </header>
 
+<!-- ÁREAS -->
 <section>
     <div class="grid">
         <div class="card">
@@ -147,6 +190,7 @@ footer{
     </div>
 </section>
 
+<!-- PROCESSO -->
 <section>
     <div class="process">
         <h2>Como funciona o processo</h2>
