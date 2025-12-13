@@ -10,26 +10,124 @@
 <style>
 body{
     margin:0;
-    min-height:100vh;
-    background:radial-gradient(circle at top,#0b0b15,#000);
     font-family:'Inter',sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    background:radial-gradient(circle at top,#0b0b15 0%,#000 70%);
     color:#eee;
+    padding-top:70px;
 }
-.card{
-    max-width:720px;
-    background:rgba(15,15,30,.95);
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 20px 60px rgba(0,0,0,.6);
+
+/* MENU */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.05);
 }
-.tag{color:#6aa8ff;font-weight:700;font-size:12px}
-h1{font-size:2.3rem;margin:15px 0}
-p,li{line-height:1.7;color:#d0d0ff}
+.nav-container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:14px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    font-weight:700;
+    font-size:1.1rem;
+}
+.menu a{
+    margin-left:28px;
+    text-decoration:none;
+    color:#ccc;
+    font-weight:500;
+}
+.menu a:hover{
+    color:#6aa8ff;
+}
+
+/* CONTEÚDO */
+section{
+    max-width:900px;
+    margin:0 auto;
+    padding:100px 20px;
+}
+
+.tag{
+    color:#6aa8ff;
+    font-weight:700;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+h1{
+    font-size:2.4rem;
+    margin:15px 0 20px;
+}
+
+p{
+    color:#d0d0ff;
+    line-height:1.7;
+}
+
+ul{
+    margin-top:20px;
+    line-height:1.8;
+    color:#c0c0ff;
+}
+
 .alert{
-    margin-top:30px;
-    padding:20px;
-    border-radius:12px;
-    background:linear-gradient(135deg,
+    margin-top:40px;
+    padding:25px;
+    border-radius:14px;
+    background:linear-gradient(135deg,#0a1b3d,#020b1f);
+    border-left:5px solid #6aa8ff;
+    color:#dbe7ff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav>
+    <div class="nav-container">
+        <div class="logo">Gestão Artística</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="batalha.html">Batalha</a>
+            <a href="autoral.html">Autoral</a>
+            <a href="visibilidade.html">Visibilidade</a>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTEÚDO -->
+<section>
+    <span class="tag">AUTORAL</span>
+    <h1>Identidade artística e visão de carreira</h1>
+
+    <p>
+        Este caminho é para artistas focados em música autoral,
+        que entendem que carreira se constrói com consistência,
+        identidade e planejamento.
+    </p>
+
+    <ul>
+        <li>Lançamentos autorais ou em produção</li>
+        <li>Identidade sonora definida</li>
+        <li>Compromisso com evolução artística</li>
+        <li>Visão de médio e longo prazo</li>
+    </ul>
+
+    <div class="alert">
+        🎵 Autenticidade vem antes da visibilidade.  
+        Crescimento sólido exige direção.
+    </div>
+</section>
+
+</body>
+</html>
