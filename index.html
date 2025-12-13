@@ -5,27 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gestão Artística</title>
 
-<link href="https://forms.gle/SpSoLiDCXzozGjNs6" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 body{
     margin:0;
     font-family:'Inter',sans-serif;
-    background:radial-gradient(circle at top,#111 0%,#000 70%);
-    color:#eee;
-    padding-top:70px;
+    background:#000;
+    color:#fff;
+    padding-top:80px;
 }
 
-/* MENU */
+/* MENU FIXO */
 nav{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    background:rgba(0,0,0,.85);
-    backdrop-filter:blur(8px);
+    background:rgba(0,0,0,.9);
+    backdrop-filter:blur(6px);
     z-index:1000;
-    border-bottom:1px solid rgba(255,255,255,.05);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 .nav-container{
     max-width:1200px;
@@ -38,116 +38,92 @@ nav{
 .logo{
     font-weight:700;
     font-size:1.1rem;
-    letter-spacing:.5px;
 }
 .menu a{
-    margin-left:28px;
+    margin-left:24px;
     text-decoration:none;
     color:#ccc;
     font-weight:500;
-    transition:.3s;
 }
 .menu a:hover{
     color:#ff4b4b;
 }
 
 /* HERO */
-header{
-    padding:90px 20px;
+.hero{
+    max-width:900px;
+    margin:0 auto;
+    padding:100px 20px;
     text-align:center;
 }
-header h1{
-    font-size:2.8rem;
-    font-weight:700;
+.hero h1{
+    font-size:2.6rem;
     margin-bottom:20px;
 }
-header p{
-    max-width:760px;
-    margin:0 auto 40px;
+.hero p{
     font-size:1.1rem;
-    color:#ccc;
-    line-height:1.6;
+    color:#ddd;
+    line-height:1.7;
 }
-.btn{
+
+/* BOTÃO */
+.btn-avaliacao{
     display:inline-block;
-    padding:16px 38px;
+    margin-top:30px;
+    padding:16px 32px;
     background:#ff4b4b;
     color:#fff;
     text-decoration:none;
-    border-radius:30px;
     font-weight:600;
+    border-radius:12px;
     transition:.3s;
 }
-.btn:hover{
-    background:#e63b3b;
+.btn-avaliacao:hover{
+    background:#ff2f2f;
+    transform:scale(1.05);
 }
 
-/* SEÇÕES */
-section{
+/* CARDS */
+.cards{
     max-width:1100px;
     margin:0 auto;
-    padding:80px 20px;
-}
-.grid{
+    padding:40px 20px 100px;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-}
-
-/* CARD LINK */
-.card-link{
-    text-decoration:none;
-    color:inherit;
+    gap:24px;
 }
 .card{
-    background:rgba(20,20,20,.95);
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 20px 60px rgba(0,0,0,.6);
-    border:1px solid rgba(255,255,255,.06);
+    background:#0f0f0f;
+    border:1px solid rgba(255,255,255,.05);
+    border-radius:18px;
+    padding:28px;
+    text-decoration:none;
+    color:#fff;
     transition:.3s;
 }
 .card:hover{
     transform:translateY(-6px);
-    box-shadow:0 30px 80px rgba(0,0,0,.8);
-    border-color:rgba(255,75,75,.4);
+    border-color:#ff4b4b;
 }
 .card h3{
     margin-top:0;
     font-size:1.4rem;
 }
 .card p{
-    color:#bbb;
+    color:#ccc;
     line-height:1.6;
 }
-
-/* PROCESSO */
-.process{
-    background:rgba(10,10,10,.9);
-    border-radius:20px;
-    padding:40px;
-}
-.process h2{
-    margin-top:0;
-}
-.process ol{
-    line-height:1.9;
-    color:#ccc;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:40px 20px;
-    font-size:.9rem;
-    color:#777;
+.card span{
+    display:block;
+    margin-top:20px;
+    color:#ff4b4b;
+    font-weight:600;
 }
 </style>
 </head>
 
 <body>
 
-<!-- MENU FIXO -->
 <nav>
     <div class="nav-container">
         <div class="logo">Gestão Artística</div>
@@ -160,81 +136,47 @@ footer{
     </div>
 </nav>
 
-<!-- HERO -->
-<header>
-    <h1>Gestão artística com critério e visão</h1>
+<section class="hero">
+    <h1>Direção artística para MCs independentes</h1>
     <p>
-        Empresa focada em direcionar MCs com potencial, oferecendo
-        orientação estratégica para batalhas, carreira autoral
-        e posicionamento de imagem.
+        Avaliação, posicionamento e crescimento real dentro da cena.  
+        Aqui você recebe direção, não promessa vazia.
     </p>
 
-    <a href="https://forms.gle/SpSoLiDCXzozGjNs6" class="btn">
-        Iniciar avaliação
+    <a href="https://forms.gle/SpSoLiDCXzozGjNs6" 
+       target="_blank" 
+       class="btn-avaliacao">
+       Iniciar Avaliação
     </a>
-</header>
-
-<!-- ÁREAS -->
-<section>
-    <div class="grid">
-
-        <a href="batalha.html" class="card-link">
-            <div class="card">
-                <h3>Batalha</h3>
-                <p>
-                    Para MCs ativos em rodas e eventos que entendem
-                    que postura, respeito e constância constroem reputação.
-                </p>
-            </div>
-        </a>
-
-        <a href="autoral.html" class="card-link">
-            <div class="card">
-                <h3>Autoral</h3>
-                <p>
-                    Para artistas focados em música própria, identidade sonora
-                    e construção de carreira a médio e longo prazo.
-                </p>
-            </div>
-        </a>
-
-        <a href="visibilidade.html" class="card-link">
-            <div class="card">
-                <h3>Visibilidade</h3>
-                <p>
-                    Para quem busca crescimento estratégico nas redes,
-                    com posicionamento claro e comunicação profissional.
-                </p>
-            </div>
-        </a>
-
-    </div>
 </section>
 
-<!-- PROCESSO -->
-<section>
-    <div class="process">
-        <h2>Como funciona o processo</h2>
-        <ol>
-            <li>O artista preenche o formulário de avaliação</li>
-            <li>Recebe a direção adequada ao seu perfil</li>
-            <li>Segue as orientações publicadas no site</li>
-            <li>Após alinhamento, ocorre o contato direto</li>
-        </ol>
+<section class="cards">
 
-        <p style="margin-top:20px;color:#999">
-            Trabalhamos com critério. Nem todo artista está pronto
-            para o próximo nível.
+    <a href="batalha.html" class="card">
+        <h3>Batalha</h3>
+        <p>
+            Avaliação de freestyle, postura, presença e leitura de roda.
         </p>
-    </div>
-</section>
+        <span>Ver direção →</span>
+    </a>
 
-<footer>
-    © 2025 — Gestão Artística Independente
-</footer>
+    <a href="autoral.html" class="card">
+        <h3>Autoral</h3>
+        <p>
+            Construção de identidade, escrita, estética e som próprio.
+        </p>
+        <span>Ver direção →</span>
+    </a>
+
+    <a href="visibilidade.html" class="card">
+        <h3>Visibilidade</h3>
+        <p>
+            Posicionamento, imagem, redes sociais e crescimento orgânico.
+        </p>
+        <span>Ver direção →</span>
+    </a>
+
+</section>
 
 </body>
 </html>
-
-
-
