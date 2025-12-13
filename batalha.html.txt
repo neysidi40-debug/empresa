@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direcionamento – MC de Batalha</title>
+<style>
+body { font-family: Arial, sans-serif; background:#0f0f0f; color:#f1f1f1; margin:0; }
+.container { max-width:800px; margin:auto; padding:40px 20px; }
+h1 { font-size:2rem; margin-bottom:10px; }
+h2 { margin-top:30px; border-left:4px solid #fff; padding-left:10px; }
+p, li { color:#ddd; line-height:1.6; }
+ul { list-style:none; padding-left:0; }
+ul li::before { content:"• "; color:#fff; }
+.box { background:#1a1a1a; padding:20px; border-radius:8px; margin-top:20px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Seu foco é: BATALHA</h1>
+<p>Esse direcionamento é para MCs que querem respeito, presença e força dentro da roda.</p>
+
+
+<h2>Priorize</h2>
+<ul>
+<li>Vídeos de batalhas (mesmo que curtos)</li>
+<li>Versos escritos e treinos</li>
+<li>Constância na cena</li>
+</ul>
+
+
+<h2>Conteúdos recomendados</h2>
+<div class="box">
+<p>• Verso de 20–40 segundos<br>
+• Treino de escrita<br>
+• Bastidores de batalha</p>
+</div>
+
+
+<h2>Evite</h2>
+<ul>
+<li>Postar qualquer coisa sem contexto</li>
+<li>Sumir por muito tempo</li>
+<li>Entrar em polêmica online</li>
+</ul>
+</div>
+</body>
+</html>

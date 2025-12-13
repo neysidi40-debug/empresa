@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Direcionamento – Artista Autoral</title>
+<style>
+body { font-family: Arial, sans-serif; background:#0f0f0f; color:#f1f1f1; margin:0; }
+.container { max-width:800px; margin:auto; padding:40px 20px; }
+h1 { font-size:2rem; margin-bottom:10px; }
+h2 { margin-top:30px; border-left:4px solid #fff; padding-left:10px; }
+p, li { color:#ddd; line-height:1.6; }
+ul { list-style:none; padding-left:0; }
+ul li::before { content:"• "; color:#fff; }
+.box { background:#1a1a1a; padding:20px; border-radius:8px; margin-top:20px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Seu foco é: MÚSICA AUTORAL</h1>
+<p>Esse direcionamento é para artistas que querem construir identidade e obra.</p>
+
+
+<h2>Priorize</h2>
+<ul>
+<li>Sua mensagem e identidade</li>
+<li>Qualidade sonora</li>
+<li>História por trás das músicas</li>
+</ul>
+
+
+<h2>Conteúdos recomendados</h2>
+<div class="box">
+<p>• Trecho de música autoral<br>
+• Bastidores de estúdio<br>
+• Explicação da letra</p>
+</div>
+
+
+<h2>Evite</h2>
+<ul>
+<li>Copiar estética de outros artistas</li>
+<li>Postar sem contexto</li>
+<li>Inconsistência</li>
+</ul>
+</div>
+</body>
+</html>
