@@ -10,50 +10,90 @@
 <style>
 body{
     margin:0;
-    min-height:100vh;
-    background:radial-gradient(circle at top,#120b00,#000);
     font-family:'Inter',sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    background:radial-gradient(circle at top,#0a1410 0%,#000 70%);
     color:#eee;
+    padding-top:70px;
 }
-.card{
-    max-width:720px;
-    background:rgba(30,20,0,.95);
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 20px 60px rgba(0,0,0,.6);
+
+/* MENU */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.05);
 }
-.tag{color:#ffb347;font-weight:700;font-size:12px}
-h1{font-size:2.3rem;margin:15px 0}
-p,li{line-height:1.7;color:#ffe6b3}
+.nav-container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:14px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    font-weight:700;
+    font-size:1.1rem;
+}
+.menu a{
+    margin-left:28px;
+    text-decoration:none;
+    color:#ccc;
+    font-weight:500;
+}
+.menu a:hover{
+    color:#4dff9a;
+}
+
+/* CONTEÚDO */
+section{
+    max-width:900px;
+    margin:0 auto;
+    padding:100px 20px;
+}
+
+.tag{
+    color:#4dff9a;
+    font-weight:700;
+    font-size:12px;
+    letter-spacing:1px;
+}
+
+h1{
+    font-size:2.4rem;
+    margin:15px 0 20px;
+}
+
+p{
+    color:#d0ffe7;
+    line-height:1.7;
+}
+
+ul{
+    margin-top:20px;
+    line-height:1.8;
+    color:#bfffe0;
+}
+
 .alert{
-    margin-top:30px;
-    padding:20px;
-    border-radius:12px;
-    background:linear-gradient(135deg,#3d2a00,#1f1400);
-    border-left:5px solid #ffb347;
+    margin-top:40px;
+    padding:25px;
+    border-radius:14px;
+    background:linear-gradient(135deg,#0a3d24,#021f12);
+    border-left:5px solid #4dff9a;
+    color:#dbffee;
 }
 </style>
 </head>
 
 <body>
-<div class="card">
-<span class="tag">VISIBILIDADE</span>
-<h1>Alcance e posicionamento</h1>
 
-<p>Para MCs que querem crescer nas redes e se posicionar.</p>
-
-<ul>
-<li>Conteúdo consistente</li>
-<li>Postura pública</li>
-<li>Comunicação clara</li>
-</ul>
-
-<div class="alert">
-📈 Visibilidade é consequência de estratégia.
-</div>
-</div>
-</body>
-</html>
+<nav>
+    <div class="nav-container">
+        <div class="logo">Gestão Artística</div>
+        <div class="menu">
+            <a href="index.h
