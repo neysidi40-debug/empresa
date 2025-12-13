@@ -1,48 +1,105 @@
 <!DOCTYPE html>
-padding: 20px;
-}
-.card {
-max-width: 720px;
-background: rgba(20, 20, 20, 0.9);
-border-radius: 20px;
-padding: 40px;
-box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-border: 1px solid rgba(255,255,255,0.05);
-}
-.tag { color: #ff4b4b; font-weight: 600; letter-spacing: 1px; }
-h1 { font-size: 2.4rem; margin: 10px 0 20px; }
-p { color: #d0d0d0; line-height: 1.7; }
-ul { margin-top: 20px; padding-left: 20px; }
-li { margin-bottom: 12px; }
-.alert {
-margin-top: 30px;
-padding: 20px;
-border-radius: 12px;
-background: linear-gradient(135deg, #3d0000, #1f0000);
-border-left: 5px solid #ff4b4b;
-font-weight: 500;
-}
-.footer { margin-top: 40px; text-align: center; font-size: 0.9rem; color: #888; }
-</style>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batalha – Direção</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #111 0%, #000 70%);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #eee;
+        }
+
+        .card {
+            max-width: 720px;
+            background: rgba(20, 20, 20, 0.92);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .tag {
+            color: #ff4b4b;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            margin: 10px 0 20px;
+            color: #fff;
+        }
+
+        p {
+            color: #d0d0d0;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin: 0 0 20px 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .alert {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #3d0000, #1f0000);
+            border-left: 5px solid #ff4b4b;
+            font-weight: 500;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
 </head>
+
 <body>
-<div class="card">
-<span class="tag">BATALHA</span>
-<h1>Postura, constância e respeito</h1>
-<p>
-Este caminho é para MCs focados em <strong>batalhas de rima e freestyle</strong>,
-dentro e fora das rodas.
-</p>
-<ul>
-<li>Participação frequente em batalhas</li>
-<li>Respeito ao público, organização e adversários</li>
-<li>Compromisso com horários e eventos</li>
-<li>Presença ativa nas redes</li>
-</ul>
-<div class="alert">
-⚠️ Talento sem postura não se sustenta.
-</div>
-<div class="footer">Continue rimando. O reconhecimento vem da constância.</div>
-</div>
+    <div class="card">
+        <div class="tag">BATALHA</div>
+
+        <h1>Postura, constância e respeito</h1>
+
+        <p>
+            Este caminho é para MCs focados em <strong>batalhas de rima e freestyle</strong>,
+            dentro e fora das rodas.
+        </p>
+
+        <ul>
+            <li>Participação frequente em batalhas</li>
+            <li>Respeito ao público, organização e adversários</li>
+            <li>Compromisso com horários e eventos</li>
+            <li>Presença ativa nas redes</li>
+        </ul>
+
+        <div class="alert">
+            ⚠️ Talento sem postura não se sustenta.<br>
+            Continue rimando. O reconhecimento vem da constância.
+        </div>
+
+        <footer>
+            Direção artística • Cena independente
+        </footer>
+    </div>
 </body>
 </html>
