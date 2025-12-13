@@ -1,105 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Batalha – Direção</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Batalha</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: radial-gradient(circle at top, #111 0%, #000 70%);
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #eee;
-        }
+<style>
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:radial-gradient(circle at top,#140a0a 0%,#000 70%);
+    color:#eee;
+    padding-top:70px;
+}
 
-        .card {
-            max-width: 720px;
-            background: rgba(20, 20, 20, 0.92);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-            border: 1px solid rgba(255,255,255,0.06);
-        }
+/* MENU */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.05);
+}
+.nav-container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:14px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    font-weight:700;
+    font-size:1.1rem;
+}
+.menu a{
+    margin-left:28px;
+    text-decoration:none;
+    color:#ccc;
+    font-weight:500;
+}
+.menu a:hover{
+    color:#ff6a6a;
+}
 
-        .tag {
-            color: #ff4b4b;
-            font-weight: 600;
-            letter-spacing: 1px;
-            font-size: 12px;
-            margin-bottom: 10px;
-        }
+/* CONTEÚDO */
+section{
+    max-width:900px;
+    margin:0 auto;
+    padding:100px 20px;
+}
 
-        h1 {
-            font-size: 2.4rem;
-            margin: 10px 0 20px;
-            color: #fff;
-        }
+.tag{
+    color:#ff6a6a;
+    font-weight:700;
+    font-size:12px;
+    letter-spacing:1px;
+}
 
-        p {
-            color: #d0d0d0;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
+h1{
+    font-size:2.4rem;
+    margin:15px 0 20px;
+}
 
-        ul {
-            margin: 0 0 20px 20px;
-        }
+p{
+    color:#ffd0d0;
+    line-height:1.7;
+}
 
-        li {
-            margin-bottom: 12px;
-        }
+ul{
+    margin-top:20px;
+    line-height:1.8;
+    color:#ffc0c0;
+}
 
-        .alert {
-            margin-top: 30px;
-            padding: 20px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #3d0000, #1f0000);
-            border-left: 5px solid #ff4b4b;
-            font-weight: 500;
-        }
-
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            font-size: 0.9em;
-            color: #888;
-        }
-    </style>
+.alert{
+    margin-top:40px;
+    padding:25px;
+    border-radius:14px;
+    background:linear-gradient(135deg,#3d0a0a,#1f0202);
+    border-left:5px solid #ff6a6a;
+    color:#ffe0e0;
+}
+</style>
 </head>
 
 <body>
-    <div class="card">
-        <div class="tag">BATALHA</div>
 
-        <h1>Postura, constância e respeito</h1>
-
-        <p>
-            Este caminho é para MCs focados em <strong>batalhas de rima e freestyle</strong>,
-            dentro e fora das rodas.
-        </p>
-
-        <ul>
-            <li>Participação frequente em batalhas</li>
-            <li>Respeito ao público, organização e adversários</li>
-            <li>Compromisso com horários e eventos</li>
-            <li>Presença ativa nas redes</li>
-        </ul>
-
-        <div class="alert">
-            ⚠️ Talento sem postura não se sustenta.<br>
-            Continue rimando. O reconhecimento vem da constância.
+<nav>
+    <div class="nav-container">
+        <div class="logo">Gestão Artística</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="batalha.html">Batalha</a>
+            <a href="autoral.html">Autoral</a>
+            <a href="visibilidade.html">Visibilidade</a>
         </div>
-
-        <footer>
-            Direção artística • Cena independente
-        </footer>
     </div>
+</nav>
+
+<section>
+    <span class="tag">BATALHA</span>
+    <h1>Postura, respeito e constância</h1>
+
+    <p>
+        Caminho para MCs focados em batalhas de rima e freestyle,
+        dentro e fora das rodas.
+    </p>
+
+    <ul>
+        <li>Participação frequente em batalhas</li>
+        <li>Respeito ao público, organização e adversários</li>
+        <li>Compromisso com horários e eventos</li>
+        <li>Presença ativa na cena</li>
+    </ul>
+
+    <div class="alert">
+        ⚠️ Talento sem postura não se sustenta.  
+        Constância constrói nome.
+    </div>
+</section>
+
 </body>
 </html>
