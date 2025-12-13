@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* VARIÁVEIS DA IDENTIDADE */
 :root{
     --bg-main:#000;
     --bg-card:#0f0f0f;
@@ -170,13 +169,59 @@ nav{
     font-weight:600;
 }
 
+/* RODAPÉ */
+footer{
+    background:#0a0a0a;
+    border-top:1px solid rgba(255,255,255,.05);
+}
+
+.footer-container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:60px 20px;
+    text-align:center;
+}
+
+.footer-container h3{
+    margin:0;
+    font-size:1.4rem;
+}
+
+.footer-slogan{
+    margin:10px 0 30px;
+    color:var(--accent);
+    font-weight:600;
+    font-size:.9rem;
+}
+
+.footer-links{
+    margin-bottom:30px;
+}
+
+.footer-links a{
+    margin:0 12px;
+    text-decoration:none;
+    color:#ccc;
+    font-size:.95rem;
+}
+.footer-links a:hover{
+    color:var(--accent);
+}
+
+.footer-copy{
+    font-size:.8rem;
+    color:#777;
+}
+
 /* RESPONSIVO */
 @media (max-width:768px){
-    .menu-desktop{
-        display:none;
-    }
-    .menu-mobile-btn{
+    .menu-desktop{ display:none; }
+    .menu-mobile-btn{ display:block; }
+}
+@media(max-width:600px){
+    .footer-links a{
         display:block;
+        margin:12px 0;
     }
 }
 </style>
@@ -218,15 +263,12 @@ nav{
         Avaliação real, posicionamento e crescimento dentro da cena.
     </p>
 
-    <a href="https://forms.gle/SpSoLiDCXzozGjNs6" 
-       target="_blank" 
-       class="btn-avaliacao">
-       Iniciar Avaliação
+    <a href="https://forms.gle/SpSoLiDCXzozGjNs6" target="_blank" class="btn-avaliacao">
+        Iniciar Avaliação
     </a>
 </section>
 
 <section class="cards">
-
     <a href="batalha.html" class="card">
         <h3>Batalha</h3>
         <p>Avaliação de freestyle, postura e presença de roda.</p>
@@ -244,8 +286,26 @@ nav{
         <p>Imagem, redes sociais e crescimento orgânico.</p>
         <span>Ver direção →</span>
     </a>
-
 </section>
+
+<footer>
+    <div class="footer-container">
+        <h3>Gestão Artística</h3>
+        <p class="footer-slogan">Sem promessa. Só direção.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="batalha.html">Batalha</a>
+            <a href="autoral.html">Autoral</a>
+            <a href="visibilidade.html">Visibilidade</a>
+            <a href="quem-somos.html">Quem Somos</a>
+        </div>
+
+        <span class="footer-copy">
+            © 2025 – Gestão Artística
+        </span>
+    </div>
+</footer>
 
 <script>
 function toggleMenu(){
