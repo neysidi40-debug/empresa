@@ -25,10 +25,10 @@ body{
     padding-top:80px;
 }
 
-/* ===== ANIMAÇÕES ===== */
+/* ===== ANIMAÇÕES (NOVO) ===== */
 .reveal{
     opacity:0;
-    transform:translateY(30px);
+    transform:translateY(20px);
     transition:opacity .8s ease, transform .8s ease;
 }
 .reveal.active{
@@ -63,12 +63,14 @@ nav{
 .logo{
     font-weight:700;
     font-size:1.1rem;
+    line-height:1.1;
 }
 
 .slogan{
     font-size:.75rem;
     color:var(--accent);
     font-weight:600;
+    letter-spacing:.5px;
     margin-top:2px;
 }
 
@@ -77,6 +79,7 @@ nav{
     margin-left:24px;
     text-decoration:none;
     color:var(--text-muted);
+    font-weight:500;
 }
 .menu-desktop a:hover{
     color:var(--accent);
@@ -93,6 +96,7 @@ nav{
     display:none;
     flex-direction:column;
     background:#000;
+    border-top:1px solid rgba(255,255,255,.08);
 }
 
 .menu-mobile a{
@@ -112,9 +116,11 @@ nav{
 
 .hero h1{
     font-size:2.6rem;
+    margin-bottom:20px;
 }
 
 .hero p{
+    font-size:1.1rem;
     color:var(--text-muted);
     line-height:1.7;
 }
@@ -132,38 +138,8 @@ nav{
     transition:.3s;
 }
 .btn-avaliacao:hover{
-    transform:scale(1.06);
     background:#ff2f2f;
-}
-
-/* BASE */
-.base-direcao{
-    max-width:1000px;
-    margin:80px auto;
-    padding:60px 20px;
-    text-align:center;
-}
-
-.base-direcao p{
-    max-width:700px;
-    margin:0 auto 40px;
-    color:var(--text-muted);
-}
-
-.base-cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:24px;
-}
-
-.base-card{
-    background:var(--bg-card);
-    border-left:4px solid var(--accent);
-    padding:26px;
-    transition:.3s;
-}
-.base-card:hover{
-    transform:translateY(-6px);
+    transform:scale(1.05);
 }
 
 /* CARDS */
@@ -183,29 +159,84 @@ nav{
     padding:28px;
     text-decoration:none;
     color:#fff;
-    transition:.35s;
+    transition:.3s;
 }
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-6px);
     border-color:var(--accent);
+}
+
+.card h3{
+    margin-top:0;
+    font-size:1.4rem;
+}
+
+.card p{
+    color:var(--text-muted);
+    line-height:1.6;
+}
+
+.card span{
+    display:block;
+    margin-top:20px;
+    color:var(--accent);
+    font-weight:600;
 }
 
 /* RODAPÉ */
 footer{
     background:#0a0a0a;
+    border-top:1px solid rgba(255,255,255,.05);
+}
+
+.footer-container{
+    max-width:1100px;
+    margin:0 auto;
     padding:60px 20px;
     text-align:center;
 }
 
+.footer-container h3{
+    margin:0;
+    font-size:1.4rem;
+}
+
 .footer-slogan{
+    margin:10px 0 30px;
     color:var(--accent);
     font-weight:600;
+    font-size:.9rem;
+}
+
+.footer-links{
+    margin-bottom:30px;
+}
+
+.footer-links a{
+    margin:0 12px;
+    text-decoration:none;
+    color:#ccc;
+    font-size:.95rem;
+}
+.footer-links a:hover{
+    color:var(--accent);
+}
+
+.footer-copy{
+    font-size:.8rem;
+    color:#777;
 }
 
 /* RESPONSIVO */
 @media (max-width:768px){
-    .menu-desktop{display:none}
-    .menu-mobile-btn{display:block}
+    .menu-desktop{ display:none; }
+    .menu-mobile-btn{ display:block; }
+}
+@media(max-width:600px){
+    .footer-links a{
+        display:block;
+        margin:12px 0;
+    }
 }
 </style>
 </head>
@@ -214,70 +245,99 @@ footer{
 
 <nav>
     <div class="nav-container">
-        <div class="logo">
+        <div class="logo reveal">
             Gestão Artística
             <div class="slogan">Sem promessa. Só direção.</div>
         </div>
+
         <div class="menu-desktop">
-            <a href="#">Home</a>
-            <a href="#">Batalha</a>
-            <a href="#">Autoral</a>
-            <a href="#">Visibilidade</a>
-            <a href="#">Quem Somos</a>
+            <a href="index.html">Home</a>
+            <a href="batalha.html">Batalha</a>
+            <a href="autoral.html">Autoral</a>
+            <a href="visibilidade.html">Visibilidade</a>
+            <a href="quem-somos.html">Quem Somos</a>
         </div>
+
         <div class="menu-mobile-btn" onclick="toggleMenu()">☰</div>
     </div>
+
     <div class="menu-mobile" id="menuMobile">
-        <a href="#">Home</a>
-        <a href="#">Batalha</a>
-        <a href="#">Autoral</a>
-        <a href="#">Visibilidade</a>
-        <a href="#">Quem Somos</a>
+        <a href="index.html">Home</a>
+        <a href="batalha.html">Batalha</a>
+        <a href="autoral.html">Autoral</a>
+        <a href="visibilidade.html">Visibilidade</a>
+        <a href="quem-somos.html">Quem Somos</a>
     </div>
 </nav>
 
 <section class="hero reveal">
     <h1>Direção artística para MCs independentes</h1>
-    <p><strong>Sem promessa. Só direção.</strong></p>
-    <a href="#" class="btn-avaliacao">Iniciar Avaliação</a>
-</section>
+    <p>
+        <strong>Sem promessa. Só direção.</strong><br>
+        Avaliação real, posicionamento e crescimento dentro da cena.
+    </p>
 
-<section class="base-direcao reveal">
-    <p>Base gratuita para artistas que querem entender o jogo antes de entrar nele.</p>
-    <div class="base-cards">
-        <div class="base-card reveal delay-1">E-books</div>
-        <div class="base-card reveal delay-2">Histórias</div>
-        <div class="base-card reveal delay-3">Documentários</div>
-    </div>
+    <a href="https://forms.gle/SpSoLiDCXzozGjNs6" target="_blank" class="btn-avaliacao">
+        Iniciar Avaliação
+    </a>
 </section>
 
 <section class="cards">
-    <a class="card reveal delay-1">Batalha</a>
-    <a class="card reveal delay-2">Autoral</a>
-    <a class="card reveal delay-3">Visibilidade</a>
+    <a href="batalha.html" class="card reveal delay-1">
+        <h3>Batalha</h3>
+        <p>Avaliação de freestyle, postura e presença de roda.</p>
+        <span>Ver direção →</span>
+    </a>
+
+    <a href="autoral.html" class="card reveal delay-2">
+        <h3>Autoral</h3>
+        <p>Identidade sonora, escrita, estética e posicionamento.</p>
+        <span>Ver direção →</span>
+    </a>
+
+    <a href="visibilidade.html" class="card reveal delay-3">
+        <h3>Visibilidade</h3>
+        <p>Imagem, redes sociais e crescimento orgânico.</p>
+        <span>Ver direção →</span>
+    </a>
 </section>
 
 <footer class="reveal">
-    <p class="footer-slogan">Sem promessa. Só direção.</p>
+    <div class="footer-container">
+        <h3>Gestão Artística</h3>
+        <p class="footer-slogan">Sem promessa. Só direção.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="batalha.html">Batalha</a>
+            <a href="autoral.html">Autoral</a>
+            <a href="visibilidade.html">Visibilidade</a>
+            <a href="quem-somos.html">Quem Somos</a>
+        </div>
+
+        <span class="footer-copy">
+            © 2025 – Gestão Artística
+        </span>
+    </div>
 </footer>
 
 <script>
 function toggleMenu(){
-    const menu=document.getElementById("menuMobile");
-    menu.style.display=menu.style.display==="flex"?"none":"flex";
+    const menu = document.getElementById("menuMobile");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
 
-/* OBSERVER */
-const reveals=document.querySelectorAll(".reveal");
-const observer=new IntersectionObserver(entries=>{
+/* ANIMAÇÃO AO SCROLL (NOVO) */
+const reveals = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
         if(entry.isIntersecting){
             entry.target.classList.add("active");
         }
     });
-},{threshold:0.15});
+},{ threshold:0.15 });
 
-reveals.forEach(el=>observer.observe(el));
+reveals.forEach(el => observer.observe(el));
 </script>
 
 </body>
