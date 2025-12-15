@@ -16,6 +16,25 @@
     --accent:#ff4b4b;
 }
 
+/* ===== LOADING ===== */
+#loading{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+    transition:opacity .8s ease, visibility .8s ease;
+}
+#loading.hide{
+    opacity:0;
+    visibility:hidden;
+}
+#loading img{
+    width:90px;
+}
+
 /* GERAL */
 body{
     margin:0;
@@ -25,7 +44,7 @@ body{
     padding-top:80px;
 }
 
-/* ===== ANIMAÇÕES (NOVO) ===== */
+/* ANIMAÇÕES */
 .reveal{
     opacity:0;
     transform:translateY(20px);
@@ -61,6 +80,16 @@ nav{
 }
 
 .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    height:42px;
+}
+
+.logo-text{
     font-weight:700;
     font-size:1.1rem;
     line-height:1.1;
@@ -70,7 +99,6 @@ nav{
     font-size:.75rem;
     color:var(--accent);
     font-weight:600;
-    letter-spacing:.5px;
     margin-top:2px;
 }
 
@@ -79,7 +107,6 @@ nav{
     margin-left:24px;
     text-decoration:none;
     color:var(--text-muted);
-    font-weight:500;
 }
 .menu-desktop a:hover{
     color:var(--accent);
@@ -166,23 +193,6 @@ nav{
     border-color:var(--accent);
 }
 
-.card h3{
-    margin-top:0;
-    font-size:1.4rem;
-}
-
-.card p{
-    color:var(--text-muted);
-    line-height:1.6;
-}
-
-.card span{
-    display:block;
-    margin-top:20px;
-    color:var(--accent);
-    font-weight:600;
-}
-
 /* RODAPÉ */
 footer{
     background:#0a0a0a;
@@ -196,33 +206,29 @@ footer{
     text-align:center;
 }
 
-.footer-container h3{
-    margin:0;
-    font-size:1.4rem;
+.footer-container img{
+    width:80px;
+    margin-bottom:12px;
 }
 
 .footer-slogan{
-    margin:10px 0 30px;
     color:var(--accent);
     font-weight:600;
-    font-size:.9rem;
-}
-
-.footer-links{
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
 .footer-links a{
     margin:0 12px;
     text-decoration:none;
     color:#ccc;
-    font-size:.95rem;
 }
 .footer-links a:hover{
     color:var(--accent);
 }
 
 .footer-copy{
+    display:block;
+    margin-top:20px;
     font-size:.8rem;
     color:#777;
 }
@@ -232,22 +238,24 @@ footer{
     .menu-desktop{ display:none; }
     .menu-mobile-btn{ display:block; }
 }
-@media(max-width:600px){
-    .footer-links a{
-        display:block;
-        margin:12px 0;
-    }
-}
 </style>
 </head>
 
 <body>
 
+<!-- LOADING -->
+<div id="loading">
+    <img src="logo.png" alt="16 Barras">
+</div>
+
 <nav>
     <div class="nav-container">
         <div class="logo reveal">
-            Gestão Artística
-            <div class="slogan">Sem promessa. Só direção.</div>
+            <img src="logo.png" alt="16 Barras">
+            <div>
+                <div class="logo-text">Gestão Artística</div>
+                <div class="slogan">Sem promessa. Só direção.</div>
+            </div>
         </div>
 
         <div class="menu-desktop">
@@ -272,10 +280,7 @@ footer{
 
 <section class="hero reveal">
     <h1>Direção artística para MCs independentes</h1>
-    <p>
-        <strong>Sem promessa. Só direção.</strong><br>
-        Avaliação real, posicionamento e crescimento dentro da cena.
-    </p>
+    <p><strong>Sem promessa. Só direção.</strong></p>
 
     <a href="https://forms.gle/SpSoLiDCXzozGjNs6" target="_blank" class="btn-avaliacao">
         Iniciar Avaliação
@@ -304,7 +309,7 @@ footer{
 
 <footer class="reveal">
     <div class="footer-container">
-        <h3>Gestão Artística</h3>
+        <img src="logo.png" alt="16 Barras">
         <p class="footer-slogan">Sem promessa. Só direção.</p>
 
         <div class="footer-links">
@@ -315,9 +320,7 @@ footer{
             <a href="quem-somos.html">Quem Somos</a>
         </div>
 
-        <span class="footer-copy">
-            © 2025 – Gestão Artística
-        </span>
+        <span class="footer-copy">© 2025 – Gestão Artística</span>
     </div>
 </footer>
 
@@ -327,17 +330,23 @@ function toggleMenu(){
     menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
 
-/* ANIMAÇÃO AO SCROLL (NOVO) */
-const reveals = document.querySelectorAll(".reveal");
-const observer = new IntersectionObserver(entries=>{
+/* LOADING */
+window.addEventListener("load",()=>{
+    setTimeout(()=>{
+        document.getElementById("loading").classList.add("hide");
+    },1800);
+});
+
+/* SCROLL */
+const reveals=document.querySelectorAll(".reveal");
+const observer=new IntersectionObserver(entries=>{
     entries.forEach(entry=>{
         if(entry.isIntersecting){
             entry.target.classList.add("active");
         }
     });
-},{ threshold:0.15 });
-
-reveals.forEach(el => observer.observe(el));
+},{threshold:0.15});
+reveals.forEach(el=>observer.observe(el));
 </script>
 
 </body>
