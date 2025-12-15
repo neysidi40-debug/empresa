@@ -96,7 +96,7 @@ nav{
 .hero{
     max-width:900px;
     margin:0 auto;
-    padding:100px 20px;
+    padding:100px 20px 60px;
     text-align:center;
 }
 
@@ -128,7 +128,63 @@ nav{
     transform:scale(1.05);
 }
 
-/* CARDS */
+/* BASE / DIREÇÃO */
+.base-direcao{
+    max-width:1000px;
+    margin:80px auto 40px;
+    padding:60px 20px;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.base-direcao h2{
+    font-size:2.2rem;
+    margin-bottom:16px;
+}
+
+.base-direcao p{
+    max-width:700px;
+    margin:0 auto 50px;
+    color:var(--text-muted);
+    line-height:1.6;
+}
+
+.base-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:24px;
+}
+
+.base-card{
+    background:var(--bg-card);
+    border-left:4px solid var(--accent);
+    padding:26px;
+    text-align:left;
+}
+
+.base-card h3{
+    margin-top:0;
+}
+
+.base-card p{
+    color:var(--text-muted);
+}
+
+.base-card span{
+    display:block;
+    margin-top:16px;
+    color:var(--accent);
+    font-weight:600;
+    font-size:.85rem;
+}
+
+.base-frase{
+    margin-top:50px;
+    font-weight:700;
+    color:var(--accent);
+}
+
+/* CARDS PRINCIPAIS */
 .cards{
     max-width:1100px;
     margin:0 auto;
@@ -266,6 +322,38 @@ footer{
     <a href="https://forms.gle/SpSoLiDCXzozGjNs6" target="_blank" class="btn-avaliacao">
         Iniciar Avaliação
     </a>
+</section>
+
+<!-- BASE / DIREÇÃO -->
+<section class="base-direcao">
+    <h2>Direção</h2>
+    <p>
+        Antes de qualquer avaliação, existe base.
+        Este espaço foi criado para orientar artistas independentes,
+        de forma gratuita, sem promessas e sem atalhos.
+    </p>
+
+    <div class="base-cards">
+        <div class="base-card">
+            <h3>E-books</h3>
+            <p>Materiais diretos sobre postura, organização e visão artística.</p>
+            <span>Em breve</span>
+        </div>
+
+        <div class="base-card">
+            <h3>Histórias da Base</h3>
+            <p>Relatos reais de erros, aprendizados e construção na cena.</p>
+            <span>Em breve</span>
+        </div>
+
+        <div class="base-card">
+            <h3>Documentários</h3>
+            <p>Conteúdos visuais sobre processo, tempo e responsabilidade.</p>
+            <span>Em breve</span>
+        </div>
+    </div>
+
+    <div class="base-frase">Sem promessa. Só direção.</div>
 </section>
 
 <section class="cards">
